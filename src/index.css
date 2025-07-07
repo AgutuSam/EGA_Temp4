@@ -1,0 +1,190 @@
+/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+/* Import Futuristic Noir Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;500;600;700&family=Teko:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: linear-gradient(135deg, #0B0C0F 0%, #1E2127 50%, #121417 100%);
+  color: #F5F7FA;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B0C0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #00FFFF, #0FF);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #0FF, #FFD700);
+}
+
+/* Glassmorphism Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+  background: rgba(11, 12, 15, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.1);
+}
+
+/* Neon Text Effects */
+.neon-text {
+  color: #00FFFF;
+  text-shadow: 
+    0 0 10px #00FFFF,
+    0 0 20px #00FFFF,
+    0 0 30px #00FFFF;
+}
+
+.neon-text-gold {
+  color: #FFD700;
+  text-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px #FFD700,
+    0 0 30px #FFD700;
+}
+
+/* Holographic Button */
+.holographic-btn {
+  background: linear-gradient(45deg, #00FFFF 0%, #8B5CF6 25%, #FF00FF 50%, #00FF00 75%, #FFD700 100%);
+  background-size: 400% 400%;
+  animation: holographic 4s ease-in-out infinite;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 24px;
+  color: #0B0C0F;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.holographic-btn:hover::before {
+  left: 100%;
+}
+
+.holographic-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+}
+
+/* Floating Elements */
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Reveal Animation */
+.reveal-animation {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.reveal-animation.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Particle Effect */
+.particle-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #00FFFF;
+  border-radius: 50%;
+  animation: particle-float 6s infinite ease-in-out;
+}
+
+@keyframes particle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+  50% { transform: translateY(-20px) rotate(180deg); opacity: 0.5; }
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #1E2127;
+  border-top: 4px solid #00FFFF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+  
+  .neon-text {
+    text-shadow: 
+      0 0 5px #00FFFF,
+      0 0 10px #00FFFF,
+      0 0 15px #00FFFF;
+  }
+  
+  .holographic-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
