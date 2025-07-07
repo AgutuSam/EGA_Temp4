@@ -7,45 +7,64 @@ export default {
   theme: {
     extend: {
       colors: {
-        noir: {
-          50: '#F5F7FA',
-          100: '#E9EEF5',
-          200: '#D3DCE6',
-          300: '#B8C5D1',
-          400: '#9BA8B4',
-          500: '#6B7280',
-          600: '#4B5563',
-          700: '#374151',
-          800: '#1F2937',
-          900: '#111827',
-          950: '#0B0C0F'
+        heritage: {
+          50: '#F8FAF6',
+          100: '#F0F3EA',
+          200: '#DDE5D0',
+          300: '#C5D1B3',
+          400: '#A8B892',
+          500: '#8B9F71',
+          600: '#708258',
+          700: '#566647',
+          800: '#445039',
+          900: '#384530',
+          950: '#1C2118'
         },
-        neon: {
-          cyan: '#00FFFF',
-          blue: '#0FF',
-          gold: '#FFD700',
-          green: '#00FF00',
-          purple: '#8B5CF6',
-          pink: '#FF00FF'
+        forest: {
+          50: '#F0FDF0',
+          100: '#DCFCDC',
+          200: '#BBF7BB',
+          300: '#86EF86',
+          400: '#4ADE4A',
+          500: '#22C522',
+          600: '#16A516',
+          700: '#158215',
+          800: '#166616',
+          900: '#145414',
+          950: '#052E05'
         },
-        electric: {
-          50: '#F0FDFF',
-          100: '#CCFBFF',
-          200: '#99F6FF',
-          300: '#5CEDFF',
-          400: '#06D6F9',
-          500: '#00B8D4',
-          600: '#0891B2',
-          700: '#0E7490',
-          800: '#155E75',
-          900: '#164E63'
+        royal: {
+          50: '#EFF6FF',
+          100: '#DBEAFE',
+          200: '#BFDBFE',
+          300: '#93C5FD',
+          400: '#60A5FA',
+          500: '#3B82F6',
+          600: '#2563EB',
+          700: '#1D4ED8',
+          800: '#1E40AF',
+          900: '#1E3A8A',
+          950: '#172554'
+        },
+        classic: {
+          50: '#FFFBEB',
+          100: '#FEF3C7',
+          200: '#FDE68A',
+          300: '#FCD34D',
+          400: '#FBBF24',
+          500: '#F59E0B',
+          600: '#D97706',
+          700: '#B45309',
+          800: '#92400E',
+          900: '#78350F',
+          950: '#451A03'
         }
       },
       fontFamily: {
-        'orbitron': ['Orbitron', 'sans-serif'],
-        'exo': ['Exo 2', 'sans-serif'],
-        'teko': ['Teko', 'sans-serif'],
-        'manrope': ['Manrope', 'sans-serif'],
+        'trajan': ['Trajan Pro', 'serif'],
+        'minion': ['Minion Pro', 'serif'],
+        'garamond': ['EB Garamond', 'serif'],
+        'optima': ['Optima', 'sans-serif'],
         'inter': ['Inter', 'sans-serif']
       },
       animation: {
@@ -115,9 +134,9 @@ export default {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'noir-gradient': 'linear-gradient(135deg, #0B0C0F 0%, #1E2127 50%, #121417 100%)',
-        'neon-gradient': 'linear-gradient(135deg, #00FFFF 0%, #0FF  50%, #FFD700 100%)',
-        'holographic': 'linear-gradient(45deg, #00FFFF 0%, #8B5CF6 25%, #FF00FF 50%, #00FF00 75%, #FFD700 100%)'
+        'heritage-gradient': 'linear-gradient(135deg, #F8FAF6 0%, #DDE5D0 50%, #C5D1B3 100%)',
+        'classic-gradient': 'linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%)',
+        'royal-gradient': 'linear-gradient(135deg, #3B82F6 0%, #2563EB 50%, #1D4ED8 100%)'
       }
     }
   },
